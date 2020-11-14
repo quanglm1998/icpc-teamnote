@@ -1,5 +1,8 @@
+inline int pos(int u) { return u << 1; }
+inline int neg(int u) { return u << 1 | 1; }
+// ZERO-indexed
+// color[i] = 1 means we choose i
 struct TwoSAT {
-    //ZERO-indexed
     int n;
     int numComp;
     vector<int> adj[V];
@@ -7,7 +10,7 @@ struct TwoSAT {
     vector<int> stTarjan;
     int color[V];
 
-    TwoSAT(int n) : n(n) {
+    TwoSAT(int n) : n(n * 2) {
         memset(root, -1, sizeof root);
         memset(low, -1, sizeof low);
         memset(num, -1, sizeof num);
