@@ -56,6 +56,18 @@ then f(n) = sum_(d|n)_mu(d)*g(n/d) with n >= 1
 
 ==================================================================
 
+Dirichlet convolution
+mu: Mobius function
+eps(i) = (i == 1)
+Id(i) = i
+phi: Euler's totient function 
+
+g = f * 1 <=> f = g * mu
+1 * mu = eps
+1 * phi = Id
+
+==================================================================
+
 Dual graph
 Euler formula: V - E + F = 2
 in dual graph: V <=> F
@@ -108,7 +120,13 @@ a. subtree of u: g(u) = SUM_{f(g(v))} with v is a child of u
 if color of {u, v} is blue: f(x) = (x+i) / 2^(i-1) with smallest i >= 1 such that x + i > 1
 if color of {u, v} is red:  f(x) = (x-i) / 2^(i-1) with smallest i >= 1 such that x - i < -1
 b. Loop: find 2 nearest 2 points where segment change color, cut the rest in half
-the value of loop is sum of the 2 segments.
+the value of loop is sum of the 2 segments. If there are an odd number, cut the middle segment
+in half and treat it as two segments 
+c. Stalk: Count the number of blue (or red) edges that are connected in one continuous path.
+If there are n of them, start with the number n. For each new edge going up, assign that value 
+of that edge to be half of the one below it.  If it is a blue edge make it positive.
+If it is a red edge make it negative.
+
 
 ==================================================================
 
@@ -120,3 +138,7 @@ b. Construct a tree
     - Let the first element is X, find a node which doesn't appear in the sequence L
     - Add edge X, L
     - Remove X
+
+#trees on n labeled vertices is n^{n-2}
+#labelled rooted forests on n vertices is (n+1)^{n−1}
+#labelled forests on n vertices with k connected components is k * n^{n−k−1}.
