@@ -3,7 +3,6 @@ CountPrimes.cc	Count primes up to N
 ExtendedEuclide.cc	Extended Euclide
 SystemLinearEquations.cc	System of linear equations
 PollardRho.cc	Pollard Rho
-Formula.txt	Formula
 Cubic.cc	Cubic
 PythagoreTriple.cc	PythagoreTriple
 
@@ -13,8 +12,9 @@ AhoCorasick.cc	Aho Corasick
 Zalgo.cc	Z algorithm
 Manacher.cc	Manacher
 SuffixAutomaton.cc	Suffix Automaton
-ALCS.cc	ACLS
+ALCS.cc	ALCS
 Eertree.cc	Palindromic Tree
+LyndonFactorization.cc	Lyndon Factorization
 
 [Combinatorial optimization]
 
@@ -31,25 +31,32 @@ FFT_chemthan.cc	FFT chemthan
 Interpolation_chemthan.cc	Interpolation
 BinaryVector.cc	Binary vector space
 DiophanteMod.cc	DiophanteMod
+BM.cc	Berlekamp-Massey
+LinearSieve.cc	Linear Sieve
 
 [Graph algorithms]
 BridgesArticulations.cc	Bridges and Articulations
 BipartiteMatching.cc	Bipartite Maximum Matching
 Blossom.cc	General Matching
 DinicFlow.cc	Dinic Flow
+DinicFlowWithScaling.cc	Dinic Flow With Scaling
+Gomory_Hu.cc	Gomory Hu Tree
 MinCostMaxFlow.cc	Min Cost-Max Flow
+MinCostMaxFlowPotential.cc	Min Cost Max Flow Potential
 BoundedFlow.cc	Bounded Feasible Flow
 Hungarian.cc	Hungarian Algorithm
 MinCut.cc	Undirected mincut
 Eulerian.cc	Eulerian Path/Circuit
 TwoSAT.cc	2-SAT
-SPFA.cc SPFA
+SPFA.cc	SPFA
 
 [Data structures]
 Treap.cc	Treap
 BigInt.cc	Big Integer
 ITConvexHull.cc	Convex Hull IT
 LinkCutTree.cc	Link Cut Tree
+OrderedSet.cc	Ordered Set
 
 [Miscellaneous]
 RNG.cc	RNG
+SQRT_forloop.cc	SQRT forloop

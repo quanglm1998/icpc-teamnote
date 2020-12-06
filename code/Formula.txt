@@ -142,23 +142,23 @@ b. Construct a tree
     - Remove X
 
 #trees on n labeled vertices is n^{n-2}
-#labelled rooted forests on n vertices is (n+1)^{n−1}
-#labelled forests on n vertices with k connected components is k * n^{n−k−1}.
+#labelled rooted forests on n vertices is (n+1)^{n-1}
+#labelled forests on n vertices with k connected components is k * n^{n-k-1}.
 
 ==================================================================
 
-Erdős–Gallai theorem
+Erdos-Gallai theorem
 A sequence of non-negative integers d1 >= ... >= dn can be represented as the degree sequence of a 
 finite simple graph on n vertices if and only if d1 + ... + dn is even and
     SUM_{i:1->k}_di <= k(k-1) + SUM_{i:k+1->n}_MIN(di, k) 
 holds for every k in 1 <= k <= n.
 
-Fulkerson–Chen–Anstee theorem
+Fulkerson-Chen-Anstee theorem
 A sequence ((a1,b1), ..., (an, bn)) of nonnegative integer pairs with a1 >= ... >= an is digraphic
 if and only if SUM_a[i] = SUM_b[i] and with 1 <= k <= n:
     SUM_{i:1->k}_ai <= SUM_{i:1->k}_MIN(bi, k-1) + SUM_{i:k+1->n}_MIN(bi, k)
 
-Gale–Ryser theorem
+Gale-Ryser theorem
 A pair of sequences of nonnegative integers (a1,..,an) and (b1,..,bn) with a1 >= ... >= an is 
 bigraphic if and only if SUM_ai = SUM_bi and with 1 <= k <= n:
     SUM_{i:1->k}_ai <= SUM_{i:1->n}_MIN(bi, k)

@@ -7,6 +7,7 @@
 \usepackage{tocloft}
 \usepackage{pdflscape}
 \usepackage{multicol}
+\usepackage{pdfpages}
 
 \renewcommand*{\ttdefault}{pcr}
 \renewcommand\cftsecfont{\fontsize{8}{9}\bfseries}
@@ -53,18 +54,18 @@
 \lstset{escapechar=@}
 
 \pagestyle{fancy}
-\fancyhead[L]{Hanoi University of Science and Technology | Bamboo}
+\fancyhead[L]{Hanoi University of Science and Technology | C'est BON!}
 \fancyhead[R]{Page \thepage}
 \fancyfoot[C]{}
 
 \fancypagestyle{plain}
 {
-\fancyhead[L]{Hanoi University of Science and Technology | Bamboo}
+\fancyhead[L]{Hanoi University of Science and Technology | C'est BON!}
 \fancyhead[R]{Page \thepage}
 \fancyfoot[C]{}
 }
 
-\title{\vspace{-4ex}\Large{Bamboo Team Notes}}
+\title{\vspace{-4ex}\Large{C'est BON! Team Notes}}
 \author{}
 \date{}
 
@@ -81,4 +82,6 @@
 
 \end{multicols}
 %\end{landscape}
+\includepdf[pages={1-}]{Teamnote_s_Formulas}
+\includepdf[pages={1-}]{cheat_sheet}
 \end{document}
