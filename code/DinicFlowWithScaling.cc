@@ -1,8 +1,10 @@
 /*
     U = max capacity
-    Complexity: O(V^2 * E)
+    Complexity: O(V * E * log(U))
     O(min(E^{1/2}, V^{2/3}) * E) if U = 1
     O(V^{1/2} * E)$ for bipartite matching.
+    Tested: https://vn.spoj.com/problems/FFLOW/
+    --> CHANGE LIM TO MAX CAPACITY<--
 */
 template <typename flow_t = int>
 struct DinicFlow {
@@ -24,7 +26,7 @@ struct DinicFlow {
         return (int)to.size() - 2;
     }
  
-    bool bfs() {
+    bool bfs(flow_t lim) {
         fill(d.begin(), d.end(), -1);
         d[s] = 0;
         queue<int> q;
@@ -33,7 +35,7 @@ struct DinicFlow {
             int u = q.front(); q.pop();
             for (auto edgeId : adj[u]) {
                 int v = to[edgeId];
-                if (d[v] == -1 && f[edgeId] < c[edgeId]) {
+                if (d[v] == -1 && lim <= c[edgeId] - f[edgeId]) {
                     d[v] = d[u] + 1;
                     if (v == t) return 1;
                     q.push(v);
@@ -48,8 +50,8 @@ struct DinicFlow {
         for (int &i = cur[u]; i < adj[u].size(); i++) {
             int edgeId = adj[u][i];
             int v = to[edgeId];
-            if (d[v] == d[u] + 1 && f[edgeId] < c[edgeId]) {
-                flow_t foo = dfs(v, min(res, c[edgeId] - f[edgeId]));
+            if (d[v] == d[u] + 1 && res <= c[edgeId] - f[edgeId]) {
+                flow_t foo = dfs(v, res);
                 if (foo) {
                     f[edgeId] += foo;
                     f[edgeId ^ 1] -= foo;
@@ -62,10 +64,16 @@ struct DinicFlow {
  
     flow_t maxFlow() {
         flow_t res = 0;
-        while (bfs()) {
+        flow_t lim = (flow_t)1 << int(round(log2(INF))); // change this to max capacity
+        while (lim >= 1) {
+            if (!bfs(lim)) {
+                lim >>= 1;
+                continue;
+            }
             fill(cur.begin(), cur.end(), 0);
-            while (flow_t aug = dfs(s, INF)) res += aug;
+            while (flow_t aug = dfs(s, lim)) res += aug;
         }
         return res;
     }
 };
+
