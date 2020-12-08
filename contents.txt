@@ -5,6 +5,7 @@ SystemLinearEquations.cc	System of linear equations
 PollardRho.cc	Pollard Rho
 Cubic.cc	Cubic
 PythagoreTriple.cc	PythagoreTriple
+TonelliShanks.cc	Tonelli-Shanks
 
 [String]
 SuffixArray.cc	Suffix Array
@@ -15,8 +16,6 @@ SuffixAutomaton.cc	Suffix Automaton
 ALCS.cc	ALCS
 Eertree.cc	Palindromic Tree
 LyndonFactorization.cc	Lyndon Factorization
-
-[Combinatorial optimization]
 
 [Geometry]
 Geometry.cc	Geometry
