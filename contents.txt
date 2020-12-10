@@ -34,6 +34,8 @@ BM.cc	Berlekamp-Massey
 LinearSieve.cc	Linear Sieve
 
 [Graph algorithms]
+Arborescence.cc Arborescence
+ArborescenceTrace.cc Arborescence With Trace
 BridgesArticulations.cc	Bridges and Articulations
 BipartiteMatching.cc	Bipartite Maximum Matching
 Blossom.cc	General Matching
