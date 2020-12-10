@@ -57,6 +57,7 @@ BigInt.cc	Big Integer
 ITConvexHull.cc	Convex Hull IT
 LinkCutTree.cc	Link Cut Tree
 OrderedSet.cc	Ordered Set
+Unordered_map.cc	Unordered Map
 
 [Miscellaneous]
 RNG.cc	RNG
