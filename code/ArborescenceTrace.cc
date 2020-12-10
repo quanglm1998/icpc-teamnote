@@ -1,6 +1,6 @@
 namespace Arborescence {
     static const int maxv = 2555 + 5;
-    static const int maxe = maxv * maxv / 2;
+    static const int maxe = maxv * maxv;
     int n, m, root;
     int pre[maxv], node[maxv], vis[maxv], best[maxv];
     struct Cost;

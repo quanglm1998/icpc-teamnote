@@ -1,6 +1,6 @@
 namespace Arborescence {
     const int maxv = 2550;
-    const int maxe = maxv * maxv / 2;
+    const int maxe = maxv * maxv;
     const long long INF = (long long) 1e18;
 
     struct edge_t {
